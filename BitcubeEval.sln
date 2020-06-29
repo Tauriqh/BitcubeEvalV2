@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcubeEval", "BitcubeEval\BitcubeEval.csproj", "{C3433C4F-57FA-4FF9-9AE5-FD367A244F73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3433C4F-57FA-4FF9-9AE5-FD367A244F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3433C4F-57FA-4FF9-9AE5-FD367A244F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3433C4F-57FA-4FF9-9AE5-FD367A244F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3433C4F-57FA-4FF9-9AE5-FD367A244F73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A929412D-F074-4C9C-906F-04B716341104}
+	EndGlobalSection
+EndGlobal
