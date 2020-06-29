@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections;
+using System.Threading.Tasks;
+using BitcubeEval.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +20,7 @@ namespace BitcubeEval.Pages.AppUser
             var authenticationManager = Request.HttpContext;
             await authenticationManager.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
-            return this.RedirectToPage("/AppUser/Register");
+            return this.RedirectToPage("/AppUser/Login");
         }
     }
 }

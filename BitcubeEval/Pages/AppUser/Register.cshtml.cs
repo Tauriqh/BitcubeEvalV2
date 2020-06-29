@@ -82,7 +82,7 @@ namespace BitcubeEval.Pages.AppUser
 
                 await this.SignInUser(ApplicationUser.EmailAddress, false);
 
-                return RedirectToPage("/Index");
+                return RedirectToPage("/AppUser/Profile", new { AppUserID = ApplicationUser.ID });
             }
         }
 
@@ -99,7 +99,7 @@ namespace BitcubeEval.Pages.AppUser
                 var claimPrincipal = new ClaimsPrincipal(claimIdenties);
                 var authenticationManager = Request.HttpContext;
 
-                // Sign In.  
+                // Sign In.
                 await authenticationManager.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimPrincipal, new AuthenticationProperties() { IsPersistent = isPersistent });
             }
             catch (Exception ex)

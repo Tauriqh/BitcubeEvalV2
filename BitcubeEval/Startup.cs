@@ -34,14 +34,14 @@ namespace BitcubeEval
                 options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             }).AddCookie(options =>
             {
-                options.LoginPath = new PathString("/AppUser/Register");
+                options.LoginPath = new PathString("/AppUser/Login");
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(5.0);
             });
 
             services.AddRazorPages();
 
             services.AddDbContext<BitvalEvalContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("AppUserContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("BitvalEvalContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

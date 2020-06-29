@@ -8594,11 +8594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tauri\\source\\repos\\BitcubeEval\\BitcubeEval\\BitcubeEval.csproj",
+      "projectUniqueName": "C:\\Users\\tauri\\source\\repos\\BitcubeEval\\BitcubeEvalV2\\BitcubeEval\\BitcubeEval.csproj",
       "projectName": "BitcubeEval",
-      "projectPath": "C:\\Users\\tauri\\source\\repos\\BitcubeEval\\BitcubeEval\\BitcubeEval.csproj",
+      "projectPath": "C:\\Users\\tauri\\source\\repos\\BitcubeEval\\BitcubeEvalV2\\BitcubeEval\\BitcubeEval.csproj",
       "packagesPath": "C:\\Users\\tauri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tauri\\source\\repos\\BitcubeEval\\BitcubeEval\\obj\\",
+      "outputPath": "C:\\Users\\tauri\\source\\repos\\BitcubeEval\\BitcubeEvalV2\\BitcubeEval\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tauri\\AppData\\Roaming\\NuGet\\NuGet.Config",

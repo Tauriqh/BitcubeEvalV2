@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FDgdavUdcwTRR54RHFNkkJpn6I9npVLTuonT9IpGW3ibCszrkPEG9MCoc4SKJNvnov6BB+tqv4FwgMFpvr/5yg==",
+  "dgSpecHash": "RTDg+eBp/siyIJRIMFOP0quRi6eGO3DVXrqL3pNoZAReDXVb8zJbgeBedg+V9cfvQq6ItSqa6IpPx/ntZaOHmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tauri\\source\\repos\\BitcubeEval\\BitcubeEval\\BitcubeEval.csproj",
+  "projectFilePath": "C:\\Users\\tauri\\source\\repos\\BitcubeEval\\BitcubeEvalV2\\BitcubeEval\\BitcubeEval.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tauri\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\tauri\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

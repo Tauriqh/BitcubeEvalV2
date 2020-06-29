@@ -8,25 +8,25 @@ using Microsoft.AspNetCore.Authorization;
 namespace BitcubeEval.Pages.AppUser
 {
     [Authorize]
-    public class DetailsModel : PageModel
+    public class ProfileModel : PageModel
     {
         private readonly BitcubeEval.Data.BitvalEvalContext _context;
 
-        public DetailsModel(BitcubeEval.Data.BitvalEvalContext context)
+        public ProfileModel(BitcubeEval.Data.BitvalEvalContext context)
         {
             _context = context;
         }
 
         public ApplicationUser ApplicationUser { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int? AppUserID)
         {
-            if (id == null)
+            if (AppUserID == null)
             {
                 return NotFound();
             }
 
-            ApplicationUser = await _context.ApplicationUser.FirstOrDefaultAsync(m => m.ID == id);
+            ApplicationUser = await _context.ApplicationUser.FirstOrDefaultAsync(m => m.ID == AppUserID);
 
             if (ApplicationUser == null)
             {

@@ -4,14 +4,17 @@
         <li class="nav-item">
             <a id="manage" class="nav-link text-dark">Hi @User.Identity.Name!</a>
         </li>
-        <li class="nav-item"> 
+        <li class="nav-item">
             <a class="nav-link text-dark" asp-page="/AppUser/Logout">Logout</a>
         </li>
     }
     else
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" id="register" asp-page="AppUser/Register">Register</a>
+            <a class="nav-link text-dark" id="register" asp-page="/AppUser/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="login" asp-page="/AppUser/Login">Login</a>
         </li>
     }
 </ul>
