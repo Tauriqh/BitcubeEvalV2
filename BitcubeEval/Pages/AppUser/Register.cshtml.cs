@@ -82,7 +82,7 @@ namespace BitcubeEval.Pages.AppUser
 
                 await this.SignInUser(ApplicationUser.EmailAddress, false);
 
-                return RedirectToPage("/AppUser/Profile", new { AppUserID = ApplicationUser.ID });
+                return RedirectToPage("/AppUser/Profile", new { Id = ApplicationUser.ID });
             }
         }
 

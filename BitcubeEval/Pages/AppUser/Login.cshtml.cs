@@ -111,7 +111,7 @@ namespace BitcubeEval.Pages.AppUser
 
             await this.SignInUser(Input.Email, false);
             
-            return RedirectToPage("/AppUser/Profile", new { AppUserID = AppUser.ID });
+            return RedirectToPage("/AppUser/Profile", new { Id = AppUser.ID });
         }
 
         private async Task SignInUser(string username, bool isPersistent)

@@ -2,6 +2,12 @@
     @if (!string.IsNullOrEmpty(@User.Identity.Name))
     {
         <li class="nav-item">
+            <a class="nav-link text-dark" asp-page="/AppUser/Profile" asp-page-handler="Link" asp-route-email="@User.Identity.Name">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-page="/AppUser/Friends">Friends</a>
+        </li>
+        <li class="nav-item">
             <a id="manage" class="nav-link text-dark">Hi @User.Identity.Name!</a>
         </li>
         <li class="nav-item">

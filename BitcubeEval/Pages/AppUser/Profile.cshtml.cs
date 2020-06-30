@@ -19,14 +19,30 @@ namespace BitcubeEval.Pages.AppUser
 
         public ApplicationUser ApplicationUser { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? AppUserID)
+        public async Task<IActionResult> OnGetAsync(int? Id)
         {
-            if (AppUserID == null)
+            if (Id == null)
             {
                 return NotFound();
             }
 
-            ApplicationUser = await _context.ApplicationUser.FirstOrDefaultAsync(m => m.ID == AppUserID);
+            ApplicationUser = await _context.ApplicationUser.FirstOrDefaultAsync(m => m.ID == Id);
+
+            if (ApplicationUser == null)
+            {
+                return NotFound();
+            }
+            return Page();
+        }
+
+        public async Task<IActionResult> OnGetLinkAsync(string Email)
+        {
+            if (Email == null)
+            {
+                return NotFound();
+            }
+
+            ApplicationUser = await _context.ApplicationUser.FirstOrDefaultAsync(m => m.EmailAddress == Email);
 
             if (ApplicationUser == null)
             {
