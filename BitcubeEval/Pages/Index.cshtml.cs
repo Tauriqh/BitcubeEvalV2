@@ -25,17 +25,5 @@ namespace BitcubeEval.Pages
         {
             return Page();
         }
-
-        /*public async Task<IActionResult> OnPostLogOff()
-        {
-           
-            var authenticationManager = Request.HttpContext;
-
-            // Sign Out.  
-            await authenticationManager.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-           
-            // Info.  
-            return this.RedirectToPage("/Index");
-        }*/
     }
 }

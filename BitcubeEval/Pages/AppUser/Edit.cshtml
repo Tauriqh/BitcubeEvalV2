@@ -9,13 +9,13 @@
 <h1>@ViewData["Title"]</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-5">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ApplicationUser.ID" />
             <div class="form-group">
                 <label asp-for="ApplicationUser.EmailAddress" class="control-label"></label>
-                <input asp-for="ApplicationUser.EmailAddress" class="form-control" />
+                <input asp-for="ApplicationUser.EmailAddress" class="form-control" readonly />
                 <span asp-validation-for="ApplicationUser.EmailAddress" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -29,12 +29,8 @@
                 <span asp-validation-for="ApplicationUser.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ApplicationUser.Password" class="control-label"></label>
-                <input asp-for="ApplicationUser.Password" class="form-control" />
-                <span asp-validation-for="ApplicationUser.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input asp-page-handler="SaveEdit" type="submit" value="Save" class="btn btn-primary" />
+                <input asp-page-handler="CancelEdit" type="submit" value="Cancel" class="btn btn-primary" />
             </div>
         </form>
     </div>

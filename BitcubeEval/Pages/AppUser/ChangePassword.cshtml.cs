@@ -1,20 +1,19 @@
-﻿using System.Linq;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Threading.Tasks;
+using BitcubeEval.Data;
+using BitcubeEval.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using BitcubeEval.Models;
-using Microsoft.AspNetCore.Authorization;
-using BitcubeEval.Data;
 
 namespace BitcubeEval.Pages.AppUser
 {
-    [Authorize]
-    public class EditModel : PageModel
+    public class ChangePasswordModel : PageModel
     {
         private readonly BitvalEvalContext _context;
 
-        public EditModel(BitvalEvalContext context)
+        public ChangePasswordModel(BitvalEvalContext context)
         {
             _context = context;
         }
@@ -22,7 +21,20 @@ namespace BitcubeEval.Pages.AppUser
         [BindProperty]
         public ApplicationUser ApplicationUser { get; set; }
 
+        static public string EmailAddress { get; set; }
+        static public string FirstName { get; set; }
+        static public string LastName { get; set; }
+
         static public string Password { get; set; }
+
+        [BindProperty]
+        [Display(Name = "Current Password")]
+        [Required]
+        [DataType(DataType.Password)]
+        public string CurrentPassword { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string CurrentPasswordErrorMessage { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -38,6 +50,9 @@ namespace BitcubeEval.Pages.AppUser
                 return NotFound();
             }
 
+            EmailAddress = ApplicationUser.EmailAddress;
+            FirstName = ApplicationUser.FirstName;
+            LastName = ApplicationUser.LastName;
             Password = ApplicationUser.Password;
 
             return Page();
@@ -45,7 +60,20 @@ namespace BitcubeEval.Pages.AppUser
 
         public async Task<IActionResult> OnPostSaveEditAsync()
         {
-            ApplicationUser.Password = Password;
+            ApplicationUser.EmailAddress = EmailAddress;
+            ApplicationUser.FirstName = FirstName;
+            ApplicationUser.LastName = LastName;
+
+            HashString Hash = new HashString();
+            CurrentPassword = Hash.ComputeSha256Hash(CurrentPassword);
+
+            if (!CurrentPassword.Equals(Password))
+            {
+                CurrentPasswordErrorMessage = "Current password mismatch!!";
+                return Page();
+            }
+
+            ApplicationUser.Password = Hash.ComputeSha256Hash(Password);
 
             _context.Attach(ApplicationUser).State = EntityState.Modified;
 
@@ -65,7 +93,9 @@ namespace BitcubeEval.Pages.AppUser
                 }
             }
 
-            Password = "";
+            EmailAddress = "";
+            FirstName = "";
+            LastName = "";
 
             return RedirectToPage("/AppUser/Profile", new { Id = ApplicationUser.ID });
         }

@@ -4,15 +4,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BitcubeEval.Models;
 using Microsoft.AspNetCore.Authorization;
+using BitcubeEval.Data;
 
 namespace BitcubeEval.Pages.AppUser
 {
     [Authorize]
     public class DeleteModel : PageModel
     {
-        private readonly BitcubeEval.Data.BitvalEvalContext _context;
+        private readonly BitvalEvalContext _context;
 
-        public DeleteModel(BitcubeEval.Data.BitvalEvalContext context)
+        public DeleteModel(BitvalEvalContext context)
         {
             _context = context;
         }

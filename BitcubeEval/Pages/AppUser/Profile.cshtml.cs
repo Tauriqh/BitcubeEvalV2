@@ -4,15 +4,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BitcubeEval.Models;
 using Microsoft.AspNetCore.Authorization;
+using BitcubeEval.Data;
 
 namespace BitcubeEval.Pages.AppUser
 {
     [Authorize]
     public class ProfileModel : PageModel
     {
-        private readonly BitcubeEval.Data.BitvalEvalContext _context;
+        private readonly BitvalEvalContext _context;
 
-        public ProfileModel(BitcubeEval.Data.BitvalEvalContext context)
+        public ProfileModel(BitvalEvalContext context)
         {
             _context = context;
         }

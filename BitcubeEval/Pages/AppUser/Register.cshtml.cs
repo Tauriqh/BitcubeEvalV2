@@ -9,17 +9,17 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using System.Security.Cryptography.X509Certificates;
 using System.Linq;
+using BitcubeEval.Data;
 
 namespace BitcubeEval.Pages.AppUser
 {
     [AllowAnonymous]
     public class CreateModel : PageModel
     {
-        private readonly Data.BitvalEvalContext _context;
+        private readonly BitvalEvalContext _context;
 
-        public CreateModel(Data.BitvalEvalContext context)
+        public CreateModel(BitvalEvalContext context)
         {
             _context = context;
         }
