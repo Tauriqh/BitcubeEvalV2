@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BitcubeEval.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BitcubeEval.Data
 {
@@ -9,6 +10,7 @@ namespace BitcubeEval.Data
         {
         }
 
-        public DbSet<BitcubeEval.Models.ApplicationUser> ApplicationUser { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
+        public DbSet<Friend> Friend { get; set; }
     }
 }

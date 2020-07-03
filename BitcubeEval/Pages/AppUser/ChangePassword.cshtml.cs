@@ -3,12 +3,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using BitcubeEval.Data;
 using BitcubeEval.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace BitcubeEval.Pages.AppUser
 {
+    [Authorize]
     public class ChangePasswordModel : PageModel
     {
         private readonly BitvalEvalContext _context;
@@ -24,7 +26,6 @@ namespace BitcubeEval.Pages.AppUser
         static public string EmailAddress { get; set; }
         static public string FirstName { get; set; }
         static public string LastName { get; set; }
-
         static public string Password { get; set; }
 
         [BindProperty]
@@ -96,6 +97,7 @@ namespace BitcubeEval.Pages.AppUser
             EmailAddress = "";
             FirstName = "";
             LastName = "";
+            Password = "";
 
             return RedirectToPage("/AppUser/Profile", new { Id = ApplicationUser.ID });
         }

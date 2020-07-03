@@ -1,17 +1,12 @@
 ﻿@page
-@model BitcubeEval.Pages.AppUser.FriendsModel
+@model BitcubeEval.Pages.AppUser.FriendRequestsModel
 @{
-    ViewData["Title"] = "Friends";
+    ViewData["Title"] = "Friend Requests";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-    <div>
-        <h1>@ViewData["Title"]</h1>
-        <a asp-page="./FriendRequests" asp-route-id="@Model.ApplicationUser.ID">Friend Requests</a>
-        <br />
-        <a asp-page="./FindFriends" asp-route-id="@Model.ApplicationUser.ID">Find Friends</a>
-    </div>
-<br />
+<h1>@ViewData["Title"]</h1>
+
 <table class="table">
     <thead>
         <tr>
@@ -42,7 +37,8 @@
                 </td>
                 <td>
                     <form method="post">
-                        <input asp-page-handler="Unfriend" asp-route-id="@Model.ApplicationUser.ID" asp-route-friendId="@item.ID" type="submit" value="Unfriend" class="btn btn-primary" />
+                        <input asp-page-handler="Accept" asp-route-id="@Model.ApplicationUser.ID" asp-route-friendId="@item.ID" type="submit" value="Accept" class="btn btn-primary" />
+                        <input asp-page-handler="Decline" asp-route-id="@Model.ApplicationUser.ID" asp-route-friendId="@item.ID" type="submit" value="Decline" class="btn btn-primary" />
                     </form>
                 </td>
             </tr>

@@ -5,7 +5,7 @@
             <a class="nav-link text-dark" asp-page="/AppUser/Profile" asp-page-handler="Link" asp-route-email="@User.Identity.Name">Profile</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-page="/AppUser/Friends">Friends</a>
+            <a class="nav-link text-dark" asp-page="/AppUser/Friends" asp-route-email="@User.Identity.Name">Friends</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-dark" asp-page="/AppUser/Logout">Logout</a>

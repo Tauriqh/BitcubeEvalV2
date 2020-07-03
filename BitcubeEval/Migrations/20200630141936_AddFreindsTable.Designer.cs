@@ -3,14 +3,16 @@ using BitcubeEval.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BitcubeEval.Migrations
 {
     [DbContext(typeof(BitvalEvalContext))]
-    partial class AppUserContextModelSnapshot : ModelSnapshot
+    [Migration("20200630141936_AddFreindsTable")]
+    partial class AddFreindsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,27 +46,6 @@ namespace BitcubeEval.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("ApplicationUser");
-                });
-
-            modelBuilder.Entity("BitcubeEval.Models.Friend", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Confirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("UserID1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserID2")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Friend");
                 });
 #pragma warning restore 612, 618
         }

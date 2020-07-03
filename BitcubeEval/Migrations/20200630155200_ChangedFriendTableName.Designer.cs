@@ -3,14 +3,16 @@ using BitcubeEval.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BitcubeEval.Migrations
 {
     [DbContext(typeof(BitvalEvalContext))]
-    partial class AppUserContextModelSnapshot : ModelSnapshot
+    [Migration("20200630155200_ChangedFriendTableName")]
+    partial class ChangedFriendTableName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

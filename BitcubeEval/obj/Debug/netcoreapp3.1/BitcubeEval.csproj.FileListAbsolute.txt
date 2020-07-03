@@ -345,3 +345,5 @@ C:\Users\tauri\source\repos\BitcubeEval\BitcubeEvalV2\BitcubeEval\obj\Debug\netc
 C:\Users\tauri\source\repos\BitcubeEval\BitcubeEvalV2\BitcubeEval\obj\Debug\netcoreapp3.1\Razor\Pages\AppUser\Profile.cshtml.g.cs
 C:\Users\tauri\source\repos\BitcubeEval\BitcubeEvalV2\BitcubeEval\obj\Debug\netcoreapp3.1\Razor\Pages\AppUser\Friends.cshtml.g.cs
 C:\Users\tauri\source\repos\BitcubeEval\BitcubeEvalV2\BitcubeEval\obj\Debug\netcoreapp3.1\Razor\Pages\AppUser\ChangePassword.cshtml.g.cs
+C:\Users\tauri\source\repos\BitcubeEval\BitcubeEvalV2\BitcubeEval\obj\Debug\netcoreapp3.1\Razor\Pages\AppUser\FindFriends.cshtml.g.cs
+C:\Users\tauri\source\repos\BitcubeEval\BitcubeEvalV2\BitcubeEval\obj\Debug\netcoreapp3.1\Razor\Pages\AppUser\FriendRequests.cshtml.g.cs
